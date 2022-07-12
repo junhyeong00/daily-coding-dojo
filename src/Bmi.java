@@ -14,7 +14,7 @@ public class Bmi {
         double weight = scanner.nextDouble();
 
         //Math.pow() 제곱함수
-      수 double bmi = weight/Math.pow(height, 2);
+        double bmi = weight/Math.pow(height, 2);
 
         if (bmi <= 18.5) {
             System.out.println("비만도 결과: 저체중");
