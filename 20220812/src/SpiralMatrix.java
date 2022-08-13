@@ -14,9 +14,9 @@ public class SpiralMatrix {
 
         while(true){
             for(int c = 0 ; c < length ; c++){
-                j = j+SW;
+                j += SW;
                 array[i][j] = k;
-                k = k + 1;
+                k += 1;
             }
 
             length = length - 1;
@@ -25,17 +25,17 @@ public class SpiralMatrix {
                 break;
             }
 
-            for(int c = 0 ; c < length ; c++){
-                i = i+SW;
+            for(int c = 0 ; c < length ; c += 1){
+                i += SW;
                 array[i][j] = k;
-                k = k + 1;
+                k += 1;
             }
 
-            SW = SW * (-1);
+            SW *= -1;
         }
 
-        for(i = 0 ; i < output ; i++){
-            for(j = 0 ; j < output ; j++){
+        for(i = 0 ; i < output ; i += 1){
+            for(j = 0 ; j < output ; j += 1){
                 System.out.printf("%2d ", array[i][j]);
             }
 
