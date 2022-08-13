@@ -13,7 +13,7 @@ public class SpiralMatrix {
         int k = 0;
 
         while(true){
-            for(int c = 0 ; c < length ; c++){
+            for(int c = 0 ; c < length ; c += 1){
                 j += SW;
                 array[i][j] = k;
                 k += 1;
