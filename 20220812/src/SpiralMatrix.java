@@ -6,25 +6,40 @@ public class SpiralMatrix {
 
         int length = scanner.nextInt();
 
-        for (int y = 0; y < length; y += 1) {
-            System.out.println();
+        int output = length;
+        int[][] array = new int[length][length];
+        int SW = 1;
+        int i = 0, j = -1;
+        int k = 0;
 
-            for (int x = 0; x < length; x += 1) {
-                if (x >= y) {
-                    System.out.print(x + y);
-                    System.out.print("\t");
-                    continue;
-                }
-
-                if (x < y) {
-                    System.out.print((length - 1) * 4 - (x + y));
-                    System.out.print("\t");
-                    continue;
-                }
-
-                System.out.print(x);
-                System.out.print("\t");
+        while(true){
+            for(int c = 0 ; c < length ; c++){
+                j = j+SW;
+                array[i][j] = k;
+                k = k + 1;
             }
+
+            length = length - 1;
+
+            if(length == 0) {
+                break;
+            }
+
+            for(int c = 0 ; c < length ; c++){
+                i = i+SW;
+                array[i][j] = k;
+                k = k + 1;
+            }
+
+            SW = SW * (-1);
+        }
+
+        for(i = 0 ; i < output ; i++){
+            for(j = 0 ; j < output ; j++){
+                System.out.printf("%2d ", array[i][j]);
+            }
+
+            System.out.println();
         }
     }
 }
