@@ -9,23 +9,24 @@ public class SpiralMatrix {
         int output = length;
         int[][] array = new int[length][length];
         int SW = 1;
-        int i = 0, j = -1;
+        int i = 0;
+        int j = -1;
         int k = 0;
 
-        while(true){
-            for(int c = 0 ; c < length ; c += 1){
+        while (true) {
+            for (int c = 0; c < length; c += 1) {
                 j += SW;
                 array[i][j] = k;
                 k += 1;
             }
 
-            length = length - 1;
+            length -= 1;
 
-            if(length == 0) {
+            if (length == 0) {
                 break;
             }
 
-            for(int c = 0 ; c < length ; c += 1){
+            for (int c = 0; c < length; c += 1) {
                 i += SW;
                 array[i][j] = k;
                 k += 1;
@@ -34,8 +35,8 @@ public class SpiralMatrix {
             SW *= -1;
         }
 
-        for(i = 0 ; i < output ; i += 1){
-            for(j = 0 ; j < output ; j += 1){
+        for (i = 0; i < output; i += 1) {
+            for (j = 0; j < output; j += 1) {
                 System.out.printf("%2d ", array[i][j]);
             }
 
