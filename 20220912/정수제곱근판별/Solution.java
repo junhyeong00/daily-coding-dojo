@@ -8,7 +8,6 @@ class Solution {
             answer = (long) Math.pow(squareRoot + 1, 2);
             return answer;
         }
-
         return -1;
     }
 }
