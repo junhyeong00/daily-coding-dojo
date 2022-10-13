@@ -5,9 +5,13 @@ function solution(answers) {
 
         const score = [];
 
-        score[0] = answers.filter((answer, index) => answer === person1[index % person1.length]).length;
-        score[1] = answers.filter((answer, index) => answer === person2[index % person2.length]).length;
-        score[2] = answers.filter((answer, index) => answer === person3[index % person3.length]).length;
+        function calcScore(person) {
+         return answers.filter((answer, index) => answer === person[index % person.length]).length;
+        }
+
+        score[0] = calcScore(person1);
+        score[1] = calcScore(person2);
+        score[2] = calcScore(person3);
 
         const maxScore = Math.max(...score);
 
