@@ -1,4 +1,4 @@
-import solution, { calcWinning, getMatchedCount, getZeroCount } from './lotto';
+import solution, { calcRanking, getMatchedCount, getZeroCount } from './lotto';
 
 test('getZeroCount', () => {
   expect(getZeroCount([44, 1, 0, 0, 31, 25])).toBe(2);
@@ -12,14 +12,14 @@ test('getMatchedCount', () => {
   expect(getMatchedCount([45, 4, 35, 20, 3, 9], [20, 9, 3, 45, 4, 35])).toBe(6);
 });
 
-test('calcWinnig', () => {
-  expect(calcWinning(0)).toBe(6);
-  expect(calcWinning(1)).toBe(6);
-  expect(calcWinning(2)).toBe(5);
-  expect(calcWinning(3)).toBe(4);
-  expect(calcWinning(4)).toBe(3);
-  expect(calcWinning(5)).toBe(2);
-  expect(calcWinning(6)).toBe(1);
+test('calcRanking', () => {
+  expect(calcRanking(0)).toBe(6);
+  expect(calcRanking(1)).toBe(6);
+  expect(calcRanking(2)).toBe(5);
+  expect(calcRanking(3)).toBe(4);
+  expect(calcRanking(4)).toBe(3);
+  expect(calcRanking(5)).toBe(2);
+  expect(calcRanking(6)).toBe(1);
 });
 
 test('solution', () => {

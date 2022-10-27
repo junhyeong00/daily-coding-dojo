@@ -5,7 +5,7 @@ export default function solution(lottos, win_nums) {
   const max = matchedCount + zeroCount;
   const min = matchedCount;
 
-  return [calcWinning(max), calcWinning(min)];
+  return [calcRanking(max), calcRanking(min)];
 }
 
 export function getZeroCount(lottos) {
@@ -17,6 +17,6 @@ export function getMatchedCount(lottos, win_nums) {
     win_nums.find((e) => element === e))).length;
 }
 
-export function calcWinning(number) {
+export function calcRanking(number) {
   return number ? 7 - number : 6;
 }
