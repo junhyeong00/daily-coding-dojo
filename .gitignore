@@ -32,12 +32,6 @@ hs_err_pid
 # Ignore Gradle build output directory
 build
 
-build.gradle
-gradle/
-gradlew.bat
-gradlew*
-settings.gradle
-
 .vscode/
 .eslintrc.js
 jest.config.js
