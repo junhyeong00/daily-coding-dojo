@@ -131,7 +131,8 @@ public class Main {
                         minX = nx;
                         minY = ny;
                         minTime = location.time + 1;
-                    } else if (nx == minX) {
+                    } 
+                    else if (nx == minX) {
                         if (ny < minY) {
                             minY = ny;
                             minTime = location.time + 1;
